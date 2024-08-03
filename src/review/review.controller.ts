@@ -7,13 +7,13 @@ import {
   Param,
   Post,
 } from '@nestjs/common';
-import { ReviewModel } from './review.model';
+import { Review } from './review.model';
 
 @Controller('review')
 export class ReviewController {
   @HttpCode(201)
   @Post('create')
-  async create(@Body() dto: Omit<ReviewModel, '_id'>) {}
+  async create(@Body() dto: Omit<Review, '_id'>) {}
 
   @HttpCode(200)
   @Delete(':id')

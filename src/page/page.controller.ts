@@ -7,14 +7,14 @@ import {
   Param,
   Post,
 } from '@nestjs/common';
-import { PageModel } from './page.model';
+import { Page } from './page.model';
 import { FindPageDto } from './dto/find-page.dto';
 
 @Controller('page')
 export class PageController {
   @HttpCode(201)
   @Post('create')
-  async create(@Body() dto: Omit<PageModel, '_id'>) {}
+  async create(@Body() dto: Omit<Page, '_id'>) {}
 
   @HttpCode(200)
   @Get(':id')
