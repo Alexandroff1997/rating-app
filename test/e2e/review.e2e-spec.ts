@@ -19,11 +19,11 @@ const reviewDto: CreateReviewDto = {
 };
 
 const loginData: AuthDto = {
-  login: 'malkoln132@gmail.com',
+  login: 'example@mail.ru',
   password: 'ads132',
 };
 
-describe('AppController (e2e)', () => {
+describe('ReviewController (e2e)', () => {
   let app: INestApplication;
   let createdId: string;
   let token: string;
