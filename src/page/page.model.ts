@@ -68,3 +68,4 @@ export class Page {
 }
 
 export const PageSchema = SchemaFactory.createForClass(Page);
+PageSchema.index({ '$**': 'text' });

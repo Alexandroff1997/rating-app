@@ -26,6 +26,12 @@ export class PageService {
       .exec();
   }
 
+  async findByText(text: string) {
+    return this.pageModel
+      .find({ $text: { $search: text, $caseSensitive: false } })
+      .exec();
+  }
+
   async deleteById(id: string) {
     return this.pageModel.findByIdAndDelete(id).exec();
   }
