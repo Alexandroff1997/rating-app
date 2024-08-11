@@ -24,7 +24,7 @@ export class HeadHunterData {
   seniorSalary: number;
 }
 
-export class TopPageAdventage {
+export class PageAdventage {
   @Prop()
   title: string;
 
@@ -54,11 +54,11 @@ export class Page {
   @Prop({ type: () => HeadHunterData })
   headHunter?: HeadHunterData;
 
-  @Prop({ type: () => [TopPageAdventage] })
-  advantages: TopPageAdventage[];
+  @Prop({ type: () => [PageAdventage] })
+  advantages?: PageAdventage[];
 
   @Prop()
-  seoText: string;
+  seoText?: string;
 
   @Prop()
   tagsTitle: string;
