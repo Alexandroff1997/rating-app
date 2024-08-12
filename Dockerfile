@@ -11,4 +11,4 @@ ADD . .
 RUN npm run build
 RUN npm prune --production
 
-CMD ["npm", "./dist/main.js"]
+CMD ["node", "./dist/main.js"]
