@@ -1,0 +1,506 @@
+{
+	"info": {
+		"_postman_id": "98456de7-f9c5-41da-9154-a5ef8fbc90d2",
+		"name": "rating-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32549572"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"example@mail.ru\",\r\n    \"password\": \"ads132\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"example@mail.ru\",\r\n    \"password\": \"ads132\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"testName\",\r\n    \"title\": \"testTitle\",\r\n    \"description\": \"description\",\r\n    \"rating\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/review/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"review",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "CreateProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"image\": \"1.png\",\r\n    \"title\": \"My product\",\r\n    \"price\": 100,\r\n    \"oldPrice\": 120,\r\n    \"credit\": 20,\r\n    \"description\": \"Description\",\r\n    \"advantages\": \"Advantages\",\r\n    \"disAdvantages\": \"DisAdvantages\",\r\n    \"categories\": [\"test\"],\r\n    \"tags\": [\"tagOne\", \"tagTwo\"],\r\n    \"characteristrics\": [{\r\n        \"name\": \"Characteristic 1\",\r\n        \"value\": \"1\"\r\n    }, {\r\n        \"name\": \"Characteristic 2\",\r\n        \"value\": \"2\"\r\n    }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/product/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProduct",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"image\": \"4.png\",\r\n    \"title\": \"My product second\",\r\n    \"price\": 100,\r\n    \"oldPrice\": 120,\r\n    \"credit\": 20,\r\n    \"description\": \"Description\",\r\n    \"advantages\": \"Advantages\",\r\n    \"disAdvantages\": \"DisAdvantages\",\r\n    \"categories\": [\"test\"],\r\n    \"tags\": [\"tagOne\", \"tagTwo\"],\r\n    \"characteristics\": [{\r\n        \"name\": \"Characteristic 1\",\r\n        \"value\": \"1\"\r\n    }, {\r\n        \"name\": \"Characteristic 2\",\r\n        \"value\": \"2\"\r\n    }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/product/66b85fc0f636c95f37b1f95e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"66b85fc0f636c95f37b1f95e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/product/66b85fc0f636c95f37b1f95e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"66b85fc0f636c95f37b1f95e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddReview",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/review/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"review",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/product/find",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"find"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindByProductId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/review/byProduct/66b0d0f0afc97cbf507ce79f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"review",
+								"byProduct",
+								"66b0d0f0afc97cbf507ce79f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Page",
+			"item": [
+				{
+					"name": "CreatePage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGVAbWFpbC5ydSIsImlhdCI6MTcyMzczNDg0MH0.Cwyl1Kzd2UNrM5-FoLBlyt6sc8dbVkvjQzrg02NM9QE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstCategory\": 1,\r\n    \"secondCategory\": \"Development\",\r\n    \"alias\": \"javascript\",\r\n    \"title\": \"JavaScript courses\",\r\n    \"category\": \"javascript\",\r\n    \"headHunber\": {\r\n        \"count\": 1000,\r\n        \"juniorSalary\": 120000,\r\n        \"middleSalary\": 220000,\r\n        \"seniorSalary\": 350000\r\n    },\r\n    \"advantages\": [{\r\n        \"title\": \"speed development\",\r\n        \"description\": \"description\"\r\n    }],\r\n    \"seoText\": \"Text\",\r\n    \"tagsTitle\": \"Knowledge\",\r\n    \"tags\": [\"TypeScript\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/page/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"page",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPageByAlias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/page/byAlias/typescript",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"page",
+								"byAlias",
+								"typescript"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindPage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstCategory\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/page/find",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"page",
+								"find"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePage",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/page/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"page",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TextSearchPage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/page/textSearch/typescript",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"page",
+								"textSearch",
+								"typescript"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Files",
+			"item": [
+				{
+					"name": "UploadFile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGVAbWFpbC5ydSIsImlhdCI6MTcyMzY5MzE1OX0.qgoXLdmEIZmjuPVX8BHoKLeBKgIb7p8beYxM1120weY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/alex/Desktop/them-snapshots-Tp0DalYO_2U-unsplash.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/files/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"files",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetFile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/static/2024-08-15/them-snapshots-Tp0DalYO_2U-unsplash.webp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"static",
+								"2024-08-15",
+								"them-snapshots-Tp0DalYO_2U-unsplash.webp"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SiteMap",
+			"item": [
+				{
+					"name": "GetSiteMap",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/sitemap/xml",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"sitemap",
+								"xml"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
