@@ -62,3 +62,6 @@ mongo-data/
 
 #clinic
 .clinic/
+
+# uploads
+/uploads
