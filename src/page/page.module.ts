@@ -10,5 +10,6 @@ import { Page, PageSchema } from './page.model';
     MongooseModule.forFeature([{ name: Page.name, schema: PageSchema }]),
   ],
   providers: [PageService],
+  exports: [PageService],
 })
 export class PageModule {}

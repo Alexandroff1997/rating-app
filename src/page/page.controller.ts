@@ -12,7 +12,6 @@ import {
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
-import { Page } from './page.model';
 import { FindPageDto } from './dto/find-page.dto';
 import { PageService } from './page.service';
 import { CreatePageDto } from './dto/create-page.dto';

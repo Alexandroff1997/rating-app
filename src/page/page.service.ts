@@ -39,6 +39,10 @@ export class PageService {
       .exec();
   }
 
+  async findAll() {
+    return this.pageModel.find({}).exec();
+  }
+
   async deleteById(id: string) {
     return this.pageModel.findByIdAndDelete(id).exec();
   }
